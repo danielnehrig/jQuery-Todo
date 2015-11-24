@@ -1,0 +1,6 @@
+[submodule "bourbon"]
+	path = bourbon
+	url = https://github.com/thoughtbot/bourbon.git
+[submodule "assets/css/bourbon"]
+	path = assets/css/bourbon
+	url = https://github.com/thoughtbot/bourbon.git

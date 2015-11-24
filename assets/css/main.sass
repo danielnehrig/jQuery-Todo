@@ -1,0 +1,131 @@
+@import '1-bourbon/app/assets/stylesheets/bourbon'
+@import '2-basics/normalize'
+@import '2-basics/fonts'
+@import '2-basics/vars'
+@import '2-basics/mixin'
+@import '2-basics/body-element'
+@import '2-basics/example-buttons'
+@import '2-basics/links'
+@import '2-basics/selection-colors'
+@import '2-basics/typography'
+.wrap
+	+display(flex)
+	+align-items(center)
+	width: 100vw
+	height: 100vh
+	+background-image(linear-gradient(#7F7F7F 0, #D3E7E8 50%))
+	.container
+		+display(inline-flex)
+		+justify-content(center)
+		+flex-direction(column)
+		margin: 10% auto
+		box-shadow: 20px 20px 35px #606060
+		header
+			+display(flex)
+			+justify-content(center)
+			+align-items(center)
+			width: auto
+			+background-image(linear-gradient(#36A3C8 0, #56A3A8 50%))
+			border-top-left-radius: 15px
+			border-top-right-radius: 15px
+			overflow: hidden
+			border-bottom: 1px solid white
+			h1
+				font-size: 32px
+				margin: 10px 10px 10px 15px
+				padding: 5px 15px
+				color: white
+				text-transform: uppercase
+				+transition()
+				border: 3px solid transparent
+				line-height: 1
+				&.active
+					border: 3px solid white
+					border-radius: 15px
+					background-color: rgba(255,255,255,0.1)
+					cursor: pointer
+			input
+				-webkit-appearance: none
+				-moz-appearance: none
+				display: inline-block
+				color: white
+				padding-left: 10px
+				+background-image(linear-gradient(to right,#36A3C8 0%, #56A3A8 80%))
+				font-size: 18px
+				font-weight: 800
+				font-family: 'Open Sans', sans-serif
+				width: 300px
+				height: 70px
+				margin-right: 5px
+				border: none
+				outline: none
+				border-left: 1px solid white
+
+		section
+			background-color: #56A3A8
+			padding: 0px 5px 5px 5px
+			ul
+				list-style: none
+				margin: 0
+				padding: 0
+				overflow: hidden
+
+				li
+					padding: 5px 10px
+					// background-color: rgba(63,143,119,0.2)
+					+background-image(linear-gradient(to right,#36A3C8 20%,#36A3C8 60%, #56A3A8 80%))
+					font-size: 18px
+					color: white
+					+transition(0.5s, ease)
+					&:nth-child(2n+0)
+						// background-color: rgba(63,143,119,0.5)
+						+background-image(linear-gradient(to right,#56A3A8 20%,#36A3C8 60%, #56A3A8 80%))
+					&.complete
+						text-decoration: line-through
+						color: #BFBFBF
+					a
+						width: 0px
+						left: -58px
+						position: relative
+					&:hover a
+						width: 60px
+						left: 0
+					.fa
+						margin-right: 15px
+					.remove
+						color: #CC0000
+						+transition(0.5s)
+						&:hover
+							color: red
+						&.hov
+							color: red
+						&.show
+							left: 0px
+					.completed
+						color: green
+						+transition(0.5s)
+						&:hover
+							color: #4FFF00
+						&.hov
+							color: #4FFF00
+						&.show
+							left: 0px
+		footer
+			&:after
+			&:before
+				content: ''
+				height: 10px
+				position: absolute
+				left: 0
+				height: 50px
+				overflow: hidden
+				background-color: #A7CFD1
+				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2)
+			span
+				+display(flex)
+				+justify-content(center)
+				+align-items(center)
+				background-color: #56A3A8
+				a
+					margin: 5px
+					color: white
