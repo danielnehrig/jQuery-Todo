@@ -4,3 +4,6 @@
 [submodule "assets/css/bourbon"]
 	path = assets/css/bourbon
 	url = https://github.com/thoughtbot/bourbon.git
+[submodule "assets/css/1-frameworks/bourbon"]
+	path = assets/css/1-frameworks/bourbon
+	url = https://github.com/thoughtbot/bourbon.git

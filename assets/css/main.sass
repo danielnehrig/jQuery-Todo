@@ -1,4 +1,4 @@
-@import '1-bourbon/app/assets/stylesheets/bourbon'
+@import '1-frameworks/bourbon/app/assets/stylesheets/bourbon'
 @import '2-basics/normalize'
 @import '2-basics/fonts'
 @import '2-basics/vars'
@@ -126,6 +126,13 @@
 				+justify-content(center)
 				+align-items(center)
 				background-color: #56A3A8
+				text-align: center
 				a
-					margin: 5px
+					margin: 5px 10px
 					color: white
+					padding: 5px
+					border: 1px solid transparent
+					border-radius: 10px
+					width: 70px
+					&.active
+						border: 1px solid white

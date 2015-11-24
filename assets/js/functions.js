@@ -9,9 +9,6 @@ $(document).on('click', '.completed', function() {
    $(this).toggleClass("hov");
 });
 
-// $( "ul" ).sortable();
-
-// Pressing enter
 $(document).keypress(function(e) {
     var str = $( "#todo-text-inp" ).val();
   
@@ -23,7 +20,6 @@ $(document).keypress(function(e) {
     }
 });
 
-// Press the + sign
 $("h1.active").click(function(){
   var str = $( "#todo-text-inp" ).val();
   
@@ -37,4 +33,23 @@ $("h1.active").click(function(){
 $("#todo-text-inp").focus(function() {
 	$("h1").addClass("active");
 });
+
+$(".filter-complete").click(function() {
+  $(this).addClass("active");
+  $(".filter-active, .filter-all").removeClass("active");
+  $("li.row").slideUp();
+  $("li.row.complete").slideDown();
+});
+$(".filter-all").click(function() {
+  $(this).addClass("active");
+  $(".filter-complete, .filter-active").removeClass("active");
+  $("li.row").fadeIn();
+});
+$(".filter-active").click(function() {
+  $(this).addClass("active");
+  $(".filter-complete, .filter-all").removeClass("active");
+  $("li.row").slideDown();
+  $("li.row.complete").slideUp();
+});
+
 });
