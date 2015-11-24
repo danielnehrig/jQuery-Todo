@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 // Action Functions
 function UpdateItems() {
-	var n = $( "li.row" ).length;
+	var n = $("li.row").length;
 	$("i.items").text( n + " Items Left");
 };
 $(document).on('click', '.remove', function() {
@@ -15,29 +15,28 @@ $(document).on('click', '.completed', function() {
 	if($(".filter-active").hasClass('active')) {
 		$this.parent().hide();
 	};
+	if($(".filter-complete").hasClass('active')) {
+		$this.parent().hide();
+	};
 });
 $(document).keypress(function(e) {
-	var str = $( "#todo-text-inp" ).val();
+	var str = $("#todo-text-inp").val();
 	if(e.which == 13 && str != "" && str != null ) {
-		$( "<li class='row'><a class='remove' href='#'><i class='fa fa-trash-o'></i></a><a class='completed' href='#'><i class='fa fa-check'></i></a>"+ str +"</li>" ).fadeIn().appendTo("ul");
-		$( "#todo-text-inp" ).val("");
-		$( "#todo-text-inp" ).focus();
-		$('h1').removeClass("active");
+		$("<li class='row'><a class='remove' href='#'><i class='fa fa-trash-o'></i></a><a class='completed' href='#'><i class='fa fa-check'></i></a>"+ str +"</li>" ).fadeIn().appendTo("ul");
+		$("#todo-text-inp").val("");
+		$("#todo-text-inp").focus();
+		$('h2').removeClass("active");
 		UpdateItems();
-	}
+	};
 });
-$("h1.active").click(function(){
-	var str = $( "#todo-text-inp" ).val();
+$("h2").click(function(){
+	var str = $("#todo-text-inp").val();
 	if( str != "" && str != null) {
-		$( "<li class='row'><a class='remove' href='#'><i class='fa fa-trash-o'></i></a><a class='completed' href='#'><i class='fa fa-check'></i></a>"+ str +"</li>" ).fadeIn().appendTo("ul");
-		$( "#todo-text-inp" ).val("");
-		$( "#todo-text-inp" ).focus();
-		$('h1').removeClass("active");
+		$("<li class='row'><a class='remove' href='#'><i class='fa fa-trash-o'></i></a><a class='completed' href='#'><i class='fa fa-check'></i></a>"+ str +"</li>" ).fadeIn().appendTo("ul");
+		$("#todo-text-inp").val("");
+		$("#todo-text-inp").focus();
 		UpdateItems();
-	}
-});
-$("#todo-text-inp").val(function() {
-	$("h1").addClass("active");
+	};
 });
 // Filter
 $(".filter-complete").click(function() {
