@@ -20,6 +20,14 @@
 		margin: 60px 0px 0px 0px
 		text-shadow: 2px 0px 8px black
 		text-align: center
+	footer
+		a.links
+			margin: 15px
+			color: black
+			font-size: 24px
+			+transition(0.5s ease)
+			&:hover
+				text-shadow: 0px 0px 8px black
 	.container
 		+display(inline-flex)
 		+justify-content(center)
@@ -165,3 +173,6 @@
 					a
 						margin: 5px 0px
 						width: auto
+		footer
+			a.links
+				display: none
