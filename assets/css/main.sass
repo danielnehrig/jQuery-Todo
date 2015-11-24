@@ -19,6 +19,7 @@
 		padding: 0
 		margin: 60px 0px 0px 0px
 		text-shadow: 2px 0px 8px black
+		text-align: center
 	.container
 		+display(inline-flex)
 		+justify-content(center)
@@ -67,7 +68,7 @@
 				border-left: 1px solid white
 		section
 			background-color: #56A3A8
-			padding: 0px 5px 5px 5px
+			padding: 0px 0px 5px 0px
 			ul
 				list-style: none
 				margin: 0
@@ -81,9 +82,11 @@
 					font-size: 18px
 					color: white
 					+transition(0.5s, ease)
-					&:nth-child(2n+0)
-						// background-color: rgba(63,143,119,0.5)
-						+background-image(linear-gradient(to right,#56A3A8 20%,#36A3C8 60%, #56A3A8 80%))
+					// &:nth-child(2n+0)
+					// 	// background-color: rgba(63,143,119,0.5)
+					// 	+background-image(linear-gradient(to right,#56A3A8 20%,#36A3C8 60%, #56A3A8 80%))
+					&:last-child
+						border-bottom: 1px solid white
 					&.complete
 						text-decoration: line-through
 						color: #BFBFBF
